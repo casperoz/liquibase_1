@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+							
+	<changeSet id="1" author="novreza">
+        <createTable tableName="tabel-novreza">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+             <column name="nama" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+             <column name="kelas" type="varchar(20)">
+			 <constraints nullable="true"></constraints>
+			 </column>
+			 <column name="jurusan" type="varchar(15)">
+			 <constraints nullable="true"></constraints>
+			 </column>
+			  <column name="NISN" type="varchar(20)">
+			 <constraints nullable="false"/>
+			 </column>
+			  <column name="jenis_kelamin" type="enum('P','L')">
+			 <constraints nullable="false"/>
+			 </column>
+			  <column name="alamat" type="varchar(100)">
+			 <constraints nullable="true"></constraints>
+			 </column>
+        </createTable>
+    </changeSet>
+							
+
+      
+</databaseChangeLog>		
